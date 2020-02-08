@@ -32,17 +32,17 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1">@</span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <input id="email" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1" />
                             </div>
                             <small id="emailHelp" class="form-text text-info">Password</small>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">#</span>
+                                    <span class="input-group-text" id="basic-addon2">#</span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                                <input id="password" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2" />
                             </div>
                             <p class="text-center">
-                                <button type="submit" class="btn btn-info">Submit</button>
+                                <button onclick="validateForm()" type="submit" class="btn btn-info">Submit</button>
                                 <small id="emailHelp" class="form-text text-info"><a href="signup.html">New User? Register</a></small>
                             </p>
 
@@ -52,6 +52,40 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function validateEmail(mail) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+                return true;
+            }
+            return false;
+        }
+
+        function matchPasswords(p1, p2) {
+            if (p1 == p2) return true;
+            return false;
+        }
+
+        function emptyPassword(password) {
+            if (password.length == 0) return true;
+            return false;
+        }
+
+        function validateForm() {
+            // alert("Validate from ran");
+            var mail = document.getElementById("email").value;
+            console.log(mail);
+            if (!validateEmail(mail)) {
+                alert("Invalid Email");
+            }
+
+            var pass = document.getElementById("password").value;
+            console.log(pass);
+            if (emptyPassword(pass)) {
+                alert("Empty Password");
+            }
+        }
+    </script>
 </body>
 
 </html>
