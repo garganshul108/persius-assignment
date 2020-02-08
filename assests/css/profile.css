@@ -1,0 +1,19 @@
+body {
+    background-color: rgba(125, 204, 145, 0.181);
+}
+
+.profile {
+    margin-top: 100px;
+}
+
+.profile .creds {
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+    padding: 15px;
+    margin: 2px;
+    margin-bottom: 10px;
+}
+
+.galleries {
+    padding: 50px !important;
+}
