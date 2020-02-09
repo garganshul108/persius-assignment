@@ -1,5 +1,5 @@
 body {
-    background: rgba(205, 236, 176, 0.632);
+    background: rgba(182, 224, 222, 0.314);
 }
 
 .gallery {}
@@ -7,7 +7,7 @@ body {
 .testomony {
     margin: 50px auto;
     padding: 80px;
-    background: rgba(228, 231, 212, 0.534);
+    background: rgba(182, 224, 222, 0.314);
     /* border-radius: 15px; */
     /* box-shadow: 1px 1px 2px black; */
 }
